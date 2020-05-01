@@ -1,4 +1,4 @@
-const SimplePromise = require('./SimplePromise');
+var SimplePromise = require('./SimplePromise');
 
 new SimplePromise(function(resolve) {
   setTimeout(function() {
