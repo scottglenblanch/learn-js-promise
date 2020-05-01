@@ -5,12 +5,12 @@ function SimplePromise (fnPassedIn) {
 function getThenFunction(fnPassedIn) {
   return function then(thenCallback) {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call
-    fnPassedIn.call(null, getResolve(thenCallback));
+    fnPassedIn.call(null, getResolveFn(thenCallback));
   }
 }
 
-function getResolve (thenCallback) {
-  return function resolve(resolvedObj) {
+function getResolveFn (thenCallback) {
+  return function resolveFn(resolvedObj) {
     thenCallback(resolvedObj);
   }
 }
