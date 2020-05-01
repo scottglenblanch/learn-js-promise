@@ -1,2 +1,2 @@
-# Learn Promises
+# Learn JS Promise
 
