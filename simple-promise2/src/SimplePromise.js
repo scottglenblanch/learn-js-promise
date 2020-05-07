@@ -1,6 +1,6 @@
 function SimplePromise (fnPassedIn) {
   this.then = function(thenCallback) {
-    fnPassedIn.call(null, function(resolveObj) {
+    fnPassedIn(function(resolveObj) {
       thenCallback(resolveObj)
     })
   }
